@@ -1,0 +1,14 @@
+{
+  "title": "OWASP SKF Server-Side Request Forgery",
+  "description": "A Flask page that checks whether a URL exists by requesting it from the server. Internal services run next to the application and are not reachable from outside.",
+  "question": "Make the server request internal addresses on your behalf to discover the services that only listen inside it (server-side request forgery).",
+  "category": "WEB",
+  "difficulty": 2,
+  "evidence_kind": "SECRET",
+  "capabilities": [
+    "ssrf",
+    "port-scanning",
+    "internal-services",
+    "http"
+  ]
+}
