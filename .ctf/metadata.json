@@ -4,11 +4,5 @@
   "question": "Make the server request internal addresses on your behalf to discover the services that only listen inside it (server-side request forgery).",
   "category": "WEB",
   "difficulty": 2,
-  "evidence_kind": "SECRET",
-  "capabilities": [
-    "ssrf",
-    "port-scanning",
-    "internal-services",
-    "http"
-  ]
+  "evidence_kind": "SECRET"
 }
