@@ -1,0 +1,42 @@
+{
+  "objectives": [
+    {
+      "key": "main",
+      "title": "Read the flag",
+      "prompt": "Make the server reach its internal services and retrieve /ctf/flag.",
+      "check": {
+        "evidence": "SECRET",
+        "format": "FLAG{%s}"
+      },
+      "dev": "FLAG{dev-skf-ssrf}",
+      "hints": [
+        "The server fetches the URL you give it, from inside its own network.",
+        "Read about server-side request forgery and which URL schemes a fetcher may accept."
+      ],
+      "steps": [
+        {
+          "key": "param",
+          "title": "Find the input",
+          "prompt": "Which form field holds the URL the server requests? (field name)",
+          "check": {
+            "answer": [
+              "url"
+            ]
+          }
+        },
+        {
+          "key": "class",
+          "title": "Name the weakness",
+          "prompt": "What class of vulnerability is this?",
+          "check": {
+            "answer": [
+              "ssrf",
+              "server-side request forgery",
+              "server side request forgery"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
